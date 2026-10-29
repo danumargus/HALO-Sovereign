@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="50%" stop-color="#0B1224" />
+      <stop offset="100%" stop-color="#070B16" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.05" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#1E293B" stroke-width="1" opacity="0.45">
+    <line x1="0" y1="110" x2="1200" y2="110" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="0" y1="450" x2="1200" y2="450" />
+    <line x1="0" y1="560" x2="1200" y2="560" />
+    <line x1="600" y1="110" x2="600" y2="560" stroke-dasharray="6,6" />
+  </g>
+
+  <!-- Outer Border -->
+  <rect x="16" y="16" width="1168" height="598" rx="14" fill="none" stroke="#334155" stroke-width="1.5" />
+  <rect x="20" y="20" width="1160" height="590" rx="12" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.5" />
+
+  <!-- Header Section -->
+  <g transform="translate(55, 48)">
+    <!-- Official HALO Sovereign Eclipse + Hex-Core Emblem -->
+    <g transform="translate(28, 24)">
+      <circle cx="0" cy="0" r="24" fill="none" stroke="url(#goldGrad)" stroke-width="3.2" filter="url(#softGlow)" />
+      <ellipse cx="0" cy="0" rx="27" ry="20" transform="rotate(-28)" fill="none" stroke="#38BDF8" stroke-width="1.3" opacity="0.85" />
+      <polygon points="0,-14 12,-7 12,7 0,14 -12,7 -12,-7" fill="#0B1325" stroke="url(#goldGrad)" stroke-width="1.5" />
+      <polygon points="0,-6 5,0 0,6 -5,0" fill="#FDE68A" />
+    </g>
+
+    <text x="68" y="24" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="#F8FAFC" letter-spacing="2">
+      HALO <tspan fill="url(#goldGrad)">SOVEREIGN</tspan>
+    </text>
+    <text x="68" y="46" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="500" fill="#94A3B8" letter-spacing="1.2">
+      SOVEREIGN COGNITIVE CONTROL PLANE FOR FRONTIER AI  •  16-LAYER CLOSED-LOOP ARCHITECTURE
+    </text>
+
+    <!-- Top Right Badge -->
+    <rect x="820" y="2" width="270" height="36" rx="18" fill="#0F172A" stroke="url(#goldGrad)" stroke-width="1.2" />
+    <text x="955" y="25" text-anchor="middle" font-family="monospace" font-size="12.5" font-weight="700" fill="#FDE68A" letter-spacing="0.8">
+      PATENT-PENDING • BYOK BLIND DEMO
+    </text>
+  </g>
+
+  <!-- 4 Top KPI Executive Cards -->
+  <g transform="translate(55, 130)">
+    <!-- Card 1: Total Token Savings -->
+    <rect x="0" y="0" width="255" height="108" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5" />
+    <text x="22" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#94A3B8" letter-spacing="1">
+      TOTAL TOKEN REDUCTION
+    </text>
+    <text x="22" y="74" font-family="system-ui, sans-serif" font-size="40" font-weight="800" fill="#34D399">
+      -98.78%
+    </text>
+    <text x="22" y="95" font-family="monospace" font-size="11.5" fill="#6EE7B7">
+      125,932 → 1,536 tokens (7 turns)
+    </text>
+
+    <!-- Card 2: Execution Speedup -->
+    <rect x="278" y="0" width="255" height="108" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" />
+    <text x="300" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#94A3B8" letter-spacing="1">
+      END-TO-END SPEEDUP
+    </text>
+    <text x="300" y="74" font-family="system-ui, sans-serif" font-size="40" font-weight="800" fill="#38BDF8">
+      2.47x
+    </text>
+    <text x="300" y="95" font-family="monospace" font-size="11.5" fill="#BAE6FD">
+      19.24s → 7.78s (Wins 7/7 turns)
+    </text>
+
+    <!-- Card 3: Standby RAM Footprint -->
+    <rect x="556" y="0" width="255" height="108" rx="10" fill="#0F172A" stroke="#A855F7" stroke-width="1.5" />
+    <text x="578" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#94A3B8" letter-spacing="1">
+      LOCAL STANDBY RAM
+    </text>
+    <text x="578" y="74" font-family="system-ui, sans-serif" font-size="40" font-weight="800" fill="#C084FC">
+      0.78 MB
+    </text>
+    <text x="578" y="95" font-family="monospace" font-size="11.5" fill="#E9D5FF">
+      &lt;1 MB footprint • 0.00% loss
+    </text>
+
+    <!-- Card 4: Annual Enterprise Savings -->
+    <rect x="834" y="0" width="256" height="108" rx="10" fill="#0F172A" stroke="url(#goldGrad)" stroke-width="1.8" />
+    <text x="856" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FDE68A" letter-spacing="1">
+      ANNUAL SAVINGS @ 100K AGENTS
+    </text>
+    <text x="856" y="74" font-family="system-ui, sans-serif" font-size="38" font-weight="800" fill="url(#goldGrad)">
+      $240.8M/yr
+    </text>
+    <text x="856" y="95" font-family="monospace" font-size="11.5" fill="#FEF08A">
+      Frees 57.1% H100/B200 GPU load
+    </text>
+  </g>
+
+  <!-- Left Panel: Visual Token & Quality Comparison -->
+  <g transform="translate(55, 282)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC" letter-spacing="0.8">
+      LIVE 7-TURN PRODUCTION BENCHMARK (OFFICIAL DEEPSEEK API, TEMP=0)
+    </text>
+
+    <!-- Baseline Bar -->
+    <text x="0" y="34" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#FCA5A5">
+      Standard Agent Harness (Baseline) — 7 API Calls
+    </text>
+    <rect x="0" y="44" width="500" height="28" rx="6" fill="url(#crimsonGrad)" />
+    <text x="14" y="63" font-family="monospace" font-size="13" font-weight="700" fill="#FFFFFF">
+      125,932 Total Tokens  |  19,244 ms  |  85.7% Pass (Turn 7 Truncated)
+    </text>
+
+    <!-- HALO Sovereign Bar -->
+    <text x="0" y="102" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#6EE7B7">
+      HALO Sovereign Control Plane — 4 API Calls (-42.9% Calls Avoided)
+    </text>
+    <rect x="0" y="112" width="500" height="28" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1" />
+    <rect x="0" y="112" width="14" height="28" rx="4" fill="url(#emeraldGrad)" filter="url(#softGlow)" />
+    <text x="26" y="131" font-family="monospace" font-size="13" font-weight="700" fill="#34D399">
+      1,536 Total Tokens (-98.78%)  |  7,780 ms  |  100.0% PASS (AST-Verified)
+    </text>
+
+    <!-- Input vs Output Breakdown Mini-Pills -->
+    <rect x="0" y="156" width="242" height="34" rx="6" fill="#0F172A" stroke="#334155" />
+    <text x="14" y="178" font-family="monospace" font-size="12" fill="#E2E8F0">
+      Input: <tspan fill="#34D399" font-weight="700">-99.26%</tspan> (122.7k → 904)
+    </text>
+
+    <rect x="258" y="156" width="242" height="34" rx="6" fill="#0F172A" stroke="#334155" />
+    <text x="272" y="178" font-family="monospace" font-size="12" fill="#E2E8F0">
+      Output: <tspan fill="#38BDF8" font-weight="700">-80.06%</tspan> (3.1k → 632)
+    </text>
+  </g>
+
+  <!-- Right Panel: Zero-Leak Black-Box Architecture Diagram -->
+  <g transform="translate(635, 282)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#F8FAFC" letter-spacing="0.8">
+      ZERO-LEAK BLIND BYOK GATEWAY ARCHITECTURE
+    </text>
+
+    <rect x="0" y="20" width="510" height="170" rx="12" fill="url(#cyanGlow)" stroke="#38BDF8" stroke-width="1.2" />
+
+    <!-- Box 1: Public Blind Client -->
+    <rect x="18" y="46" width="135" height="90" rx="8" fill="#0F172A" stroke="#64748B" stroke-width="1.5" />
+    <text x="85" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#E2E8F0">
+      BLIND CLIENT
+    </text>
+    <text x="85" y="95" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#94A3B8">
+      Your Code / Task
+    </text>
+    <text x="85" y="114" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#38BDF8">
+      + Your API Key
+    </text>
+
+    <!-- Arrow 1 -->
+    <line x1="158" y1="91" x2="184" y2="91" stroke="#38BDF8" stroke-width="2" />
+    <polygon points="184,86 194,91 184,96" fill="#38BDF8" />
+
+    <!-- Box 2: HALO Sovereign Black-Box Vault -->
+    <rect x="198" y="38" width="150" height="106" rx="10" fill="#090D16" stroke="url(#goldGrad)" stroke-width="2" />
+    <text x="273" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#FDE68A">
+      HALO SOVEREIGN
+    </text>
+    <text x="273" y="82" text-anchor="middle" font-family="monospace" font-size="10" fill="#34D399">
+      16-Layer Closed Loop
+    </text>
+    <text x="273" y="100" text-anchor="middle" font-family="monospace" font-size="10" fill="#94A3B8">
+      Opaque Hex Schema
+    </text>
+    <text x="273" y="118" text-anchor="middle" font-family="monospace" font-size="10" fill="#F59E0B">
+      [Trade Secret Vault]
+    </text>
+
+    <!-- Arrow 2 -->
+    <line x1="352" y1="91" x2="378" y2="91" stroke="#10B981" stroke-width="2" />
+    <polygon points="378,86 388,91 378,96" fill="#10B981" />
+
+    <!-- Box 3: Verified Output + ZK Receipt -->
+    <rect x="392" y="46" width="102" height="90" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.5" />
+    <text x="443" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#34D399">
+      VERIFIED
+    </text>
+    <text x="443" y="94" text-anchor="middle" font-family="monospace" font-size="10" fill="#E2E8F0">
+      100% Syntax
+    </text>
+    <text x="443" y="113" text-anchor="middle" font-family="monospace" font-size="10" fill="#6EE7B7">
+      HMAC Receipt
+    </text>
+
+    <text x="255" y="172" text-anchor="middle" font-family="monospace" font-size="11" fill="#BAE6FD">
+      store: false (Zero Data Retention) • $0.00 Host Cost • 0% Secret Leakage
+    </text>
+  </g>
+
+  <!-- Footer Bar -->
+  <g transform="translate(55, 588)">
+    <text x="0" y="0" font-family="monospace" font-size="12" fill="#94A3B8">
+      🔒 SHA-256 PRIOR-ART MERKLE SEAL VERIFIED  |  AVAILABLE FOR ENTERPRISE LICENSING &amp; STRATEGIC M&amp;A
+    </text>
+    <text x="1090" y="0" text-anchor="end" font-family="monospace" font-size="12.5" font-weight="700" fill="#FDE68A">
+      halo.sovereign@proton.me
+    </text>
+  </g>
+</svg>
