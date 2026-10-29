@@ -6,7 +6,7 @@
 
 🌐 **Sprachen / Languages:** **[English](README.md)** | **[Español](README.es.md)** | **[简体中文](README.zh.md)** | **[日本語](README.ja.md)** | **[Français](README.fr.md)** | **[Deutsch](README.de.md)**
 
-> **Proprietäre Closed-Loop-Architektur | Geschäftsgeheimnis & zum Patent angemeldet**
+> **Proprietäre Closed-Loop-Architektur | Geschäftsgeheimnis**
 > Verfügbar für Enterprise-Lizenzierung und strategische Akquisition (M&A Data Room unter NDA).
 > 📩 **Direktkontakt (VIP-Evaluierungs-Tokens & M&A-Anfragen):** [`halo.sovereign@proton.me`](mailto:halo.sovereign@proton.me)
 

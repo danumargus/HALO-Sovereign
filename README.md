@@ -6,7 +6,7 @@
 
 🌐 **Languages:** **[English](README.md)** | **[Español](README.es.md)** | **[简体中文](README.zh.md)** | **[日本語](README.ja.md)** | **[Français](README.fr.md)** | **[Deutsch](README.de.md)**
 
-> **Proprietary Closed-Loop Architecture | Trade Secret & Patent-Pending**
+> **Proprietary Closed-Loop Architecture | Trade Secret**
 > Available for Enterprise Licensing & Strategic Acquisition (M&A Data Room under NDA).
 > 📩 **Direct Contact (VIP Evaluation Tokens & M&A Inquiries):** [`halo.sovereign@proton.me`](mailto:halo.sovereign@proton.me)
 
@@ -27,6 +27,20 @@ Tested live against official `deepseek-chat` (`https://api.deepseek.com/v1/chat/
 | **Task Quality & Syntax Integrity** | `6 / 7` (`85.7%` — failed Turn 7 via output truncation) | **`7 / 7` (`100.0% PASS`)** | **`+14.3%` quality & 0% truncation** |
 | **Local Standby Memory Footprint** | `N/A` | **`0.78 MB` RAM** | **`< 1 MB` standby footprint** |
 
+### Full-Product Surgical Output Benchmark (DeepSeek, 4 controlled debugging tasks)
+
+A second battery measured the complete bundled HALO Sovereign `0.2.0` product, all 16 layers loaded and full-system canary `PASS`. The baseline returned complete JavaScript modules; HALO requested only the target-symbol decision and reconstructed the complete verified module locally.
+
+| Metric | Standard Baseline | HALO Sovereign | Measured Delta |
+| :--- | ---: | ---: | ---: |
+| **Input tokens** | `7,159` | **`804`** | **`-88.77%`** |
+| **Output tokens** | `7,104` | **`616`** | **`-91.33%`** |
+| **Total external tokens** | `14,263` | **`1,420`** | **`-90.04%`** |
+| **Executable quality checks** | `3 / 4` | **`4 / 4`** | **HALO passed all 4** |
+| **Provider latency** | `22.73 s` | **`5.63 s`** | **HALO lower** |
+
+The 616 provider output tokens were expanded locally into four complete verified modules of roughly 8.3–8.5k characters each. This is a controlled proof-of-mechanism on four JavaScript debugging fixtures, not a universal workload claim.
+
 ---
 
 ## 2. Multi-Provider Compatibility & Measurement Batteries
@@ -34,7 +48,7 @@ Tested live against official `deepseek-chat` (`https://api.deepseek.com/v1/chat/
 HALO Sovereign operates as a host-agnostic control plane between any agentic harness and all major frontier inference providers.
 
 > [!IMPORTANT]
-> **Ephemeral BYOK (Bring Your Own Key) Guarantee:** The evaluator's API key is processed strictly in volatile process memory during demo execution. It is never written to disk, never persisted in databases, and never retained: it vanishes completely once the request terminates.
+> **Ephemeral BYOK (Bring Your Own Key) Guarantee:** The evaluator's API key is held only for the live request, is never written to HALO files or databases, and is not included in evaluation history. The key is relayed only to the selected provider for the evaluator-requested call.
 
 ### Measured Empirical Telemetry (*In Vivo*)
 
@@ -89,13 +103,13 @@ Projected annual infrastructure impact for an AI platform or enterprise operatin
 
 ---
 
-## 4. Zero-Key-Retention Guarantee (Ephemeral RAM Only)
+## 4. Zero-Key-Retention Guarantee (Request-Scoped BYOK)
 
-🔒 **Your API Key Disappears Immediately Upon Request Completion:**
-- **Zero Disk Persistence:** Your key is never written to disk, databases, or logs.
-- **Ephemeral RAM Execution:** The key is held strictly in volatile memory for the duration of the HTTP request to proxy the single test call you initiate.
-- **Immediate Destruction:** The memory reference is wiped as soon as your response is transmitted.
-- **Zero Secondary Usage:** The author has zero access to your key and cannot reuse it. Its sole purpose is billing your own test run to your own provider account.
+🔒 **HALO does not persist evaluator API keys:**
+- **Zero Disk Persistence:** The gateway does not write the key to HALO files, databases, or evaluation history.
+- **Request-Scoped Handling:** The key is held only while proxying the evaluator-requested provider call.
+- **Provider-Only Relay:** The key is sent only to the selected official provider endpoint for that call.
+- **Zero Secondary Usage:** HALO has no background reuse path for evaluator keys; subsequent calls require the evaluator to provide the key again.
 
 ---
 

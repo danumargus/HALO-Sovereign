@@ -6,7 +6,7 @@
 
 🌐 **语言 / Languages:** **[English](README.md)** | **[Español](README.es.md)** | **[简体中文](README.zh.md)** | **[日本語](README.ja.md)** | **[Français](README.fr.md)** | **[Deutsch](README.de.md)**
 
-> **专有闭环架构 | 商业机密与专利申请中 (Patent-Pending)**
+> **专有闭环架构 | 商业机密**
 > 提供企业级授权与战略收购评估 (在 NDA 协议下开放 M&A 数据室)。
 > 📩 **官方直联邮箱 (申请 VIP 评估令牌与并购 M&A 洽谈):** [`halo.sovereign@proton.me`](mailto:halo.sovereign@proton.me)
 

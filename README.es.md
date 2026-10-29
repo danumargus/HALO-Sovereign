@@ -6,7 +6,7 @@
 
 🌐 **Idiomas:** **[English](README.md)** | **[Español](README.es.md)** | **[简体中文](README.zh.md)** | **[日本語](README.ja.md)** | **[Français](README.fr.md)** | **[Deutsch](README.de.md)**
 
-> **Arquitectura Propietaria en Bucle Cerrado | Secreto Industrial y Patente en Trámite**
+> **Arquitectura Propietaria en Bucle Cerrado | Secreto Industrial**
 > Disponible para Licenciamiento Enterprise y Adquisición Estratégica (Data Room M&A bajo NDA).
 > 📩 **Contacto Directo (Tokens de Evaluación VIP y Consultas M&A):** [`halo.sovereign@proton.me`](mailto:halo.sovereign@proton.me)
 
@@ -27,6 +27,20 @@ Verificado en directo contra `deepseek-chat` oficial (`https://api.deepseek.com/
 | **Calidad e Integridad Sintáctica** | `6 / 7` (`85,7%` — falló el Turno 7 por truncamiento de salida) | **`7 / 7` (`100,0% PASS`)** | **`+14,3%` calidad y 0% truncamiento** |
 | **Consumo Local de RAM en Reposo** | `N/A` | **`0,78 MB` RAM** | **Huella `< 1 MB` en espera** |
 
+### Benchmark Quirúrgico de Salida con el Producto Completo (DeepSeek, 4 tareas controladas)
+
+Una segunda batería midió el producto completo HALO Sovereign `0.2.0`, con las 16 capas cargadas y el canario de sistema completo en `PASS`. El baseline devolvió módulos JavaScript completos; HALO pidió únicamente la decisión sobre el símbolo objetivo y reconstruyó localmente el módulo completo verificado.
+
+| Métrica | Baseline Estándar | HALO Sovereign | Diferencia Medida |
+| :--- | ---: | ---: | ---: |
+| **Tokens de entrada** | `7.159` | **`804`** | **`-88,77%`** |
+| **Tokens de salida** | `7.104` | **`616`** | **`-91,33%`** |
+| **Tokens externos totales** | `14.263` | **`1.420`** | **`-90,04%`** |
+| **Comprobaciones ejecutables de calidad** | `3 / 4` | **`4 / 4`** | **HALO superó las 4** |
+| **Latencia agregada del proveedor** | `22,73 s` | **`5,63 s`** | **HALO menor** |
+
+Los 616 tokens de salida del proveedor se expandieron localmente en cuatro módulos completos verificados de aproximadamente 8,3–8,5 mil caracteres cada uno. Es una prueba controlada del mecanismo sobre cuatro casos de debugging JavaScript, no una afirmación universal sobre cualquier carga de trabajo.
+
 ---
 
 ## 2. Matriz de Compatibilidad Multi-Proveedor y Baterías de Medición
@@ -34,7 +48,7 @@ Verificado en directo contra `deepseek-chat` oficial (`https://api.deepseek.com/
 HALO Sovereign opera como plano de control agnóstico entre cualquier arnés de agentes y los principales proveedores de modelos frontera.
 
 > [!IMPORTANT]
-> **Garantía Efímera BYOK (Bring Your Own Key):** La clave de API del evaluador se procesa estrictamente en la memoria volátil del proceso durante la ejecución de la prueba. Nunca se guarda en disco, no se persiste en bases de datos ni se almacena jamás: desaparece de inmediato al finalizar la solicitud.
+> **Garantía Efímera BYOK (Bring Your Own Key):** La clave del evaluador se mantiene solo durante la petición en vivo, no se escribe en archivos ni bases de datos de HALO y no se incluye en el historial de evaluaciones. Solo se reenvía al proveedor seleccionado para la llamada solicitada por el evaluador.
 
 ### Mediciones Factuales en Vivo (*In Vivo Telemetry*)
 
@@ -89,13 +103,13 @@ Proyección anual de costes de infraestructura para una plataforma de IA o corpo
 
 ---
 
-## 4. Garantía de Destrucción Inmediata de API Key (Memoria RAM Efímera Únicamente)
+## 4. Garantía de No Persistencia de Claves (BYOK limitado a la petición)
 
-🔒 **Tu Clave de API Desaparece al Instante tras la Petición:**
-- **Cero Persistencia en Disco:** Tu clave jamás se escribe en archivos de texto, bases de datos ni registros del servidor.
-- **Ejecución Exclusiva en Memoria RAM Volátil:** La clave solo existe en memoria durante los milisegundos exactos que tarda la petición HTTP en comunicarse con el proveedor oficial.
-- **Destrucción Inmediata:** La referencia en memoria se sobrescribe y destruye en cuanto se emite la respuesta.
-- **Cero Uso Secundario:** El autor no tiene acceso a tu clave ni puede reutilizarla. El único y exclusivo uso es tarificar tu propia prueba en tu propia cuenta.
+🔒 **HALO no persiste las claves API de los evaluadores:**
+- **Cero Persistencia en Disco:** El gateway no escribe la clave en archivos, bases de datos ni historial de evaluaciones de HALO.
+- **Uso Limitado a la Petición:** La clave se mantiene únicamente mientras se retransmite la llamada solicitada por el evaluador.
+- **Reenvío Solo al Proveedor:** La clave se envía exclusivamente al endpoint oficial del proveedor seleccionado para esa llamada.
+- **Cero Reutilización en Segundo Plano:** HALO no dispone de una ruta para reutilizar claves del evaluador; cada nueva llamada exige que el evaluador vuelva a proporcionarla.
 
 ---
 

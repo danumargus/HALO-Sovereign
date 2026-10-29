@@ -6,7 +6,7 @@
 
 🌐 **Langues / Languages:** **[English](README.md)** | **[Español](README.es.md)** | **[简体中文](README.zh.md)** | **[日本語](README.ja.md)** | **[Français](README.fr.md)** | **[Deutsch](README.de.md)**
 
-> **Architecture Propriétaire en Boucle Fermée | Secret Industriel & Brevet en Instance**
+> **Architecture Propriétaire en Boucle Fermée | Secret Industriel**
 > Disponible pour Licence Entreprise et Acquisition Stratégique (Data Room M&A sous NDA).
 > 📩 **Contact Direct (Jetons d’Évaluation VIP & Demandes M&A) :** [`halo.sovereign@proton.me`](mailto:halo.sovereign@proton.me)
 

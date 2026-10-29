@@ -6,7 +6,7 @@
 
 🌐 **言語 / Languages:** **[English](README.md)** | **[Español](README.es.md)** | **[简体中文](README.zh.md)** | **[日本語](README.ja.md)** | **[Français](README.fr.md)** | **[Deutsch](README.de.md)**
 
-> **独自クローズドループ・アーキテクチャ | 営業秘密および特許出願中 (Patent-Pending)**
+> **独自クローズドループ・アーキテクチャ | 営業秘密**
 > エンタープライズ・ライセンスおよび戦略的買収 (NDA 締結後の M&A データルーム開示) に対応。
 > 📩 **公式連絡先 (VIP 評価トークン申請・M&A お問い合わせ):** [`halo.sovereign@proton.me`](mailto:halo.sovereign@proton.me)
 
